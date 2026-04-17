@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.4 on win32)" generated="2026-04-17T18:12:54.925133" rpa="false" schemaversion="5">
+<suite id="s1" name="Teste-Agibank" source="C:\Automacao\robot-framework\Testes_automatizado\teste-agibank.robot">
+<test id="s1-t1" name="Caso de teste 01 - Acessar a opção de &quot;Pesquisa&quot;" line="9">
+<kw name="Abrir o navegador e acessar o blog" owner="resourcs" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-04-17T18:12:55.242164" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-04-17T18:12:55.241922" elapsed="2.158575"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-04-17T18:12:57.402040" elapsed="0.041845"/>
+</kw>
+<status status="PASS" start="2026-04-17T18:12:55.241032" elapsed="2.203101"/>
+</kw>
+<kw name="Acessar o blog blog.agibank.com.br" owner="resourcs">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-04-17T18:12:57.445595" level="INFO">Opening url 'https://blog.agibank.com.br/'</msg>
+<arg>url=${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-04-17T18:12:57.445214" elapsed="3.451183"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-04-17T18:13:04.283557" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-04-17T18:13:04.284953" level="FAIL">Element '("//div[@class='ast-builder-grid-row ast-builder-grid-row-has-sides ast-builder-grid-row-no-center']//div[@class='ast-builder-layout-element ast-flex site-header-focus-item ast-header-search']//span[@class='ahfb-svg-iconset ast-inline-flex svg-baseline']")' not visible after 3 seconds.</msg>
+<arg>${botao_pesquisa}</arg>
+<arg>timeout=3s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2026-04-17T18:13:00.896712" elapsed="3.398069">Element '("//div[@class='ast-builder-grid-row ast-builder-grid-row-has-sides ast-builder-grid-row-no-center']//div[@class='ast-builder-layout-element ast-flex site-header-focus-item ast-header-search']//span[@class='ahfb-svg-iconset ast-inline-flex svg-baseline']")' not visible after 3 seconds.</status>
+</kw>
+<status status="FAIL" start="2026-04-17T18:12:57.444796" elapsed="6.850366">Element '("//div[@class='ast-builder-grid-row ast-builder-grid-row-has-sides ast-builder-grid-row-no-center']//div[@class='ast-builder-layout-element ast-flex site-header-focus-item ast-header-search']//span[@class='ahfb-svg-iconset ast-inline-flex svg-baseline']")' not visible after 3 seconds.</status>
+</kw>
+<kw name="Fechar o navegador" owner="resourcs" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-04-17T18:13:04.296169" elapsed="2.403497"/>
+</kw>
+<status status="PASS" start="2026-04-17T18:13:04.295827" elapsed="2.404027"/>
+</kw>
+<doc>Objetivo deste teste é verificar se a opção de "Pesquisa" no blog da Aigbank está funcionand.</doc>
+<tag>botao_pesquisa</tag>
+<status status="FAIL" start="2026-04-17T18:12:55.239861" elapsed="11.460364">Element '("//div[@class='ast-builder-grid-row ast-builder-grid-row-has-sides ast-builder-grid-row-no-center']//div[@class='ast-builder-layout-element ast-flex site-header-focus-item ast-header-search']//span[@class='ahfb-svg-iconset ast-inline-flex svg-baseline']")' not visible after 3 seconds.</status>
+</test>
+<doc>Essa suite testa o acesso ao blog</doc>
+<status status="FAIL" start="2026-04-17T18:12:54.927613" elapsed="11.773758"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">botao_pesquisa</stat>
+</tag>
+<suite>
+<stat name="Teste-Agibank" id="s1" pass="0" fail="1" skip="0">Teste-Agibank</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
