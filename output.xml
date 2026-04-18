@@ -1,143 +1,234 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.14.4 on win32)" generated="2026-04-17T23:28:19.930901" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.2 (Python 3.14.4 on win32)" generated="2026-04-18T02:49:15.409867" rpa="false" schemaversion="5">
 <suite id="s1" name="Teste-Agibank" source="C:\Automacao\robot-framework\Testes_automatizado\teste-agibank.robot">
-<test id="s1-t1" name="Caso de teste 01 - Acessar a opção de &quot;Pesquisa&quot;" line="9">
+<test id="s1-t1" name="Caso de teste 02 - Pesquisar conteúdo na barra de pesquisa" line="18">
 <kw name="Abrir o navegador e acessar o blog" owner="resourcs" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-04-17T23:28:20.310661" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<msg time="2026-04-18T02:49:15.785818" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-04-17T23:28:20.310411" elapsed="1.196871"/>
+<status status="PASS" start="2026-04-18T02:49:15.785564" elapsed="1.118053"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-04-17T23:28:21.507535" elapsed="0.030500"/>
+<status status="PASS" start="2026-04-18T02:49:16.904401" elapsed="0.044160"/>
 </kw>
-<status status="PASS" start="2026-04-17T23:28:20.309553" elapsed="1.228686"/>
+<status status="PASS" start="2026-04-18T02:49:15.784656" elapsed="1.164139"/>
 </kw>
-<kw name="Acessar o blog blog.agibank.com.br" owner="resourcs">
+<kw name="Digitar na caixa de pesquisa o texto &quot;Consignado&quot;" owner="resourcs" source_name="Digitar na caixa de pesquisa o texto &quot;${Consignado}&quot;">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2026-04-17T23:28:21.539864" level="INFO">Opening url 'https://blog.agibank.com.br/'</msg>
+<msg time="2026-04-18T02:49:16.950513" level="INFO">Opening url 'https://blog.agibank.com.br/'</msg>
 <arg>url=${url}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2026-04-17T23:28:21.539447" elapsed="0.836448"/>
-</kw>
-<kw name="Aguardar elemento com texto" owner="resourcs">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=//*[contains(text(), "${texto}")]</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-04-17T23:28:22.377127" elapsed="0.167255"/>
-</kw>
-<arg>O Agibank</arg>
-<status status="PASS" start="2026-04-17T23:28:22.376512" elapsed="0.168013"/>
+<status status="PASS" start="2026-04-18T02:49:16.950133" elapsed="0.153299"/>
 </kw>
 <kw name="Clicar no elemento com texto" owner="resourcs">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-04-17T23:28:22.548012" level="INFO">Clicking element 'xpath=//*[contains(text(), "O Agibank")]'.</msg>
+<msg time="2026-04-18T02:49:17.106051" level="INFO">Clicking element 'xpath=//*[contains(text(), "O Agibank")]'.</msg>
+<msg time="2026-04-18T02:49:18.024578" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-72.png"&gt;&lt;img src="selenium-screenshot-72.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-04-18T02:49:18.024951" level="FAIL">StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=147.0.7727.102); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff70ac20245+146d5]
+	chromedriver!GetHandleVerifier [0x7ff70ac202b0+14740]
+	chromedriver!(No symbol) [0x7ff70a98d7cd]
+	chromedriver!(No symbol) [0x7ff70a9a4ece]
+	chromedriver!(No symbol) [0x7ff70a9a35d0]
+	chromedriver!(No symbol) [0x7ff70a99640b]
+	chromedriver!(No symbol) [0x7ff70a9941ae]
+	chromedriver!(No symbol) [0x7ff70a998875]
+	chromedriver!(No symbol) [0x7ff70a99893f]
+	chromedriver!(No symbol) [0x7ff70a9e8f10]
+	chromedriver!(No symbol) [0x7ff70a9db06f]
+	chromedriver!(No symbol) [0x7ff70aa0ff6a]
+	chromedriver!(No symbol) [0x7ff70a9da986]
+	chromedriver!(No symbol) [0x7ff70aa34818]
+	chromedriver!(No symbol) [0x7ff70a9d9018]
+	chromedriver!(No symbol) [0x7ff70a9d9f03]
+	chromedriver!GetHandleVerifier [0x7ff70af358f9+329d89]
+	chromedriver!GetHandleVerifier [0x7ff70af2fe46+3242d6]
+	chromedriver!GetHandleVerifier [0x7ff70af530b2+347542]
+	chromedriver!GetHandleVerifier [0x7ff70ac3d3d5+31865]
+	chromedriver!GetHandleVerifier [0x7ff70ac4600c+3a49c]
+	chromedriver!GetHandleVerifier [0x7ff70ac29634+1dac4]
+	chromedriver!GetHandleVerifier [0x7ff70ac297e6+1dc76]
+	chromedriver!GetHandleVerifier [0x7ff70ac0e2f7+2787]
+	KERNEL32!BaseThreadInitThunk [0x7ffa0c907374+14]
+	ntdll!RtlUserThreadStart [0x7ffa0d29cc91+21]
+</msg>
 <arg>xpath=//*[contains(text(), "${texto}")]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-17T23:28:22.545443" elapsed="1.299378"/>
+<status status="FAIL" start="2026-04-18T02:49:17.105003" elapsed="0.929814">StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=147.0.7727.102); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff70ac20245+146d5]
+	chromedriver!GetHandleVerifier [0x7ff70ac202b0+14740]
+	chromedriver!(No symbol) [0x7ff70a98d7cd]
+	chromedriver!(No symbol) [0x7ff70a9a4ece]
+	chromedriver!(No symbol) [0x7ff70a9a35d0]
+	chromedriver!(No symbol) [0x7ff70a99640b]
+	chromedriver!(No symbol) [0x7ff70a9941ae]
+	chromedriver!(No symbol) [0x7ff70a998875]
+	chromedriver!(No symbol) [0x7ff70a99893f]
+	chromedriver!(No symbol) [0x7ff70a9e8f10]
+	chromedriver!(No symbol) [0x7ff70a9db06f]
+	chromedriver!(No symbol) [0x7ff70aa0ff6a]
+	chromedriver!(No symbol) [0x7ff70a9da986]
+	chromedriver!(No symbol) [0x7ff70aa34818]
+	chromedriver!(No symbol) [0x7ff70a9d9018]
+	chromedriver!(No symbol) [0x7ff70a9d9f03]
+	chromedriver!GetHandleVerifier [0x7ff70af358f9+329d89]
+	chromedriver!GetHandleVerifier [0x7ff70af2fe46+3242d6]
+	chromedriver!GetHandleVerifier [0x7ff70af530b2+347542]
+	chromedriver!GetHandleVerifier [0x7ff70ac3d3d5+31865]
+	chromedriver!GetHandleVerifier [0x7ff70ac4600c+3a49c]
+	chromedriver!GetHandleVerifier [0x7ff70ac29634+1dac4]
+	chromedriver!GetHandleVerifier [0x7ff70ac297e6+1dc76]
+	chromedriver!GetHandleVerifier [0x7ff70ac0e2f7+2787]
+	KERNEL32!BaseThreadInitThunk [0x7ffa0c907374+14]
+	ntdll!RtlUserThreadStart [0x7ffa0d29cc91+21]
+</status>
 </kw>
 <arg>O Agibank</arg>
-<status status="PASS" start="2026-04-17T23:28:22.544729" elapsed="1.300796"/>
-</kw>
-<status status="PASS" start="2026-04-17T23:28:21.538880" elapsed="2.306882"/>
-</kw>
-<kw name="Clicar na opcao de Pesquisa" owner="resourcs">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-04-17T23:28:23.848565" level="INFO">Clicking element 'class=ahfb-svg-iconset.ast-inline-flex.svg-baseline'.</msg>
-<arg>${botao_pesquisa}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-17T23:28:23.848034" elapsed="0.193908"/>
-</kw>
-<status status="PASS" start="2026-04-17T23:28:23.847100" elapsed="0.195087"/>
-</kw>
-<kw name="Verificar se o botao abri a caixa de pesquisa" owner="resourcs">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${caixa_pesquisa}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-04-17T23:28:24.044136" elapsed="0.076416"/>
-</kw>
-<status status="PASS" start="2026-04-17T23:28:24.043502" elapsed="0.077266"/>
-</kw>
-<kw name="Fechar o navegador" owner="resourcs" type="TEARDOWN">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-04-17T23:28:24.122419" elapsed="2.561033"/>
-</kw>
-<status status="PASS" start="2026-04-17T23:28:24.121845" elapsed="2.561775"/>
-</kw>
-<doc>Objetivo deste teste é verificar se a opção de "Pesquisa" no blog da Aigbank está funcionand.</doc>
-<tag>botao_pesquisa</tag>
-<status status="PASS" start="2026-04-17T23:28:20.308245" elapsed="6.375615"/>
-</test>
-<test id="s1-t2" name="Caso de teste 02 - Pesquisar conteúdo na barra de pesquisa" line="18">
-<kw name="Abrir o navegador e acessar o blog" owner="resourcs" type="SETUP">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-04-17T23:28:26.686135" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<arg>browser=chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-04-17T23:28:26.685944" elapsed="0.863509"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-04-17T23:28:27.549780" elapsed="0.043548"/>
-</kw>
-<status status="PASS" start="2026-04-17T23:28:26.685599" elapsed="0.907936"/>
-</kw>
-<kw name="Digitar na caixa de pesquisa o &quot;conteudo&quot;" owner="resourcs" source_name="Digitar na caixa de pesquisa o &quot;${conteudo}&quot;">
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2026-04-17T23:28:27.595603" level="INFO">Opening url 'https://blog.agibank.com.br/'</msg>
-<arg>url=${url}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2026-04-17T23:28:27.595017" elapsed="0.667723"/>
-</kw>
-<kw name="Aguardar elemento com texto" owner="resourcs">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=//*[contains(text(), "${texto}")]</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-04-17T23:28:28.265403" elapsed="0.039630"/>
-</kw>
-<arg>O Agibank</arg>
-<status status="PASS" start="2026-04-17T23:28:28.263217" elapsed="0.042114"/>
-</kw>
-<kw name="Sleep 5s">
-<msg time="2026-04-17T23:28:28.306828" level="FAIL">No keyword with name 'Sleep 5s' found. Did you mean:
-    BuiltIn.Sleep</msg>
-<status status="FAIL" start="2026-04-17T23:28:28.306748" elapsed="0.000158">No keyword with name 'Sleep 5s' found. Did you mean:
-    BuiltIn.Sleep</status>
+<status status="FAIL" start="2026-04-18T02:49:17.104273" elapsed="0.930821">StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=147.0.7727.102); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff70ac20245+146d5]
+	chromedriver!GetHandleVerifier [0x7ff70ac202b0+14740]
+	chromedriver!(No symbol) [0x7ff70a98d7cd]
+	chromedriver!(No symbol) [0x7ff70a9a4ece]
+	chromedriver!(No symbol) [0x7ff70a9a35d0]
+	chromedriver!(No symbol) [0x7ff70a99640b]
+	chromedriver!(No symbol) [0x7ff70a9941ae]
+	chromedriver!(No symbol) [0x7ff70a998875]
+	chromedriver!(No symbol) [0x7ff70a99893f]
+	chromedriver!(No symbol) [0x7ff70a9e8f10]
+	chromedriver!(No symbol) [0x7ff70a9db06f]
+	chromedriver!(No symbol) [0x7ff70aa0ff6a]
+	chromedriver!(No symbol) [0x7ff70a9da986]
+	chromedriver!(No symbol) [0x7ff70aa34818]
+	chromedriver!(No symbol) [0x7ff70a9d9018]
+	chromedriver!(No symbol) [0x7ff70a9d9f03]
+	chromedriver!GetHandleVerifier [0x7ff70af358f9+329d89]
+	chromedriver!GetHandleVerifier [0x7ff70af2fe46+3242d6]
+	chromedriver!GetHandleVerifier [0x7ff70af530b2+347542]
+	chromedriver!GetHandleVerifier [0x7ff70ac3d3d5+31865]
+	chromedriver!GetHandleVerifier [0x7ff70ac4600c+3a49c]
+	chromedriver!GetHandleVerifier [0x7ff70ac29634+1dac4]
+	chromedriver!GetHandleVerifier [0x7ff70ac297e6+1dc76]
+	chromedriver!GetHandleVerifier [0x7ff70ac0e2f7+2787]
+	KERNEL32!BaseThreadInitThunk [0x7ffa0c907374+14]
+	ntdll!RtlUserThreadStart [0x7ffa0d29cc91+21]
+</status>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>${botao_pesquisa}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-04-17T23:28:28.307094" elapsed="0.000054"/>
+<status status="NOT RUN" start="2026-04-18T02:49:18.035310" elapsed="0.000044"/>
 </kw>
-<status status="FAIL" start="2026-04-17T23:28:27.594284" elapsed="0.713031">No keyword with name 'Sleep 5s' found. Did you mean:
-    BuiltIn.Sleep</status>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${caixa_pesquisa}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-04-18T02:49:18.035486" elapsed="0.000041"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>locator=${caixa_pesquisa}</arg>
+<arg>text=${Consignado}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-04-18T02:49:18.035649" elapsed="0.000033"/>
+</kw>
+<status status="FAIL" start="2026-04-18T02:49:16.949404" elapsed="1.086415">StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=147.0.7727.102); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff70ac20245+146d5]
+	chromedriver!GetHandleVerifier [0x7ff70ac202b0+14740]
+	chromedriver!(No symbol) [0x7ff70a98d7cd]
+	chromedriver!(No symbol) [0x7ff70a9a4ece]
+	chromedriver!(No symbol) [0x7ff70a9a35d0]
+	chromedriver!(No symbol) [0x7ff70a99640b]
+	chromedriver!(No symbol) [0x7ff70a9941ae]
+	chromedriver!(No symbol) [0x7ff70a998875]
+	chromedriver!(No symbol) [0x7ff70a99893f]
+	chromedriver!(No symbol) [0x7ff70a9e8f10]
+	chromedriver!(No symbol) [0x7ff70a9db06f]
+	chromedriver!(No symbol) [0x7ff70aa0ff6a]
+	chromedriver!(No symbol) [0x7ff70a9da986]
+	chromedriver!(No symbol) [0x7ff70aa34818]
+	chromedriver!(No symbol) [0x7ff70a9d9018]
+	chromedriver!(No symbol) [0x7ff70a9d9f03]
+	chromedriver!GetHandleVerifier [0x7ff70af358f9+329d89]
+	chromedriver!GetHandleVerifier [0x7ff70af2fe46+3242d6]
+	chromedriver!GetHandleVerifier [0x7ff70af530b2+347542]
+	chromedriver!GetHandleVerifier [0x7ff70ac3d3d5+31865]
+	chromedriver!GetHandleVerifier [0x7ff70ac4600c+3a49c]
+	chromedriver!GetHandleVerifier [0x7ff70ac29634+1dac4]
+	chromedriver!GetHandleVerifier [0x7ff70ac297e6+1dc76]
+	chromedriver!GetHandleVerifier [0x7ff70ac0e2f7+2787]
+	KERNEL32!BaseThreadInitThunk [0x7ffa0c907374+14]
+	ntdll!RtlUserThreadStart [0x7ffa0d29cc91+21]
+</status>
+</kw>
+<kw name="Clicar no botão para pesquisar" owner="resourcs">
+<status status="NOT RUN" start="2026-04-18T02:49:18.036360" elapsed="0.000067"/>
+</kw>
+<kw name="Verificar se o resultado do conteudo de pesquisa é exibido &quot;Consignado&quot;" owner="resourcs" source_name="Verificar se o resultado do conteudo de pesquisa é exibido &quot;${Consignado}&quot;">
+<status status="NOT RUN" start="2026-04-18T02:49:18.036895" elapsed="0.000066"/>
 </kw>
 <kw name="Fechar o navegador" owner="resourcs" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-04-18T02:49:18.153851" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-73.png"&gt;&lt;img src="selenium-screenshot-73.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-04-18T02:49:18.037857" elapsed="0.116159"/>
+</kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-04-17T23:28:28.308177" elapsed="2.268240"/>
+<status status="PASS" start="2026-04-18T02:49:18.154215" elapsed="2.515372"/>
 </kw>
-<status status="PASS" start="2026-04-17T23:28:28.307838" elapsed="2.268736"/>
+<status status="PASS" start="2026-04-18T02:49:18.037503" elapsed="2.632223"/>
 </kw>
 <doc>Objetivo deste teste é verificar se a pesquisa está retornando resultado relevantes ao termo.</doc>
-<status status="FAIL" start="2026-04-17T23:28:26.684664" elapsed="3.892190">No keyword with name 'Sleep 5s' found. Did you mean:
-    BuiltIn.Sleep</status>
+<status status="FAIL" start="2026-04-18T02:49:15.783052" elapsed="4.886909">StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=147.0.7727.102); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff70ac20245+146d5]
+	chromedriver!GetHandleVerifier [0x7ff70ac202b0+14740]
+	chromedriver!(No symbol) [0x7ff70a98d7cd]
+	chromedriver!(No symbol) [0x7ff70a9a4ece]
+	chromedriver!(No symbol) [0x7ff70a9a35d0]
+	chromedriver!(No symbol) [0x7ff70a99640b]
+	chromedriver!(No symbol) [0x7ff70a9941ae]
+	chromedriver!(No symbol) [0x7ff70a998875]
+	chromedriver!(No symbol) [0x7ff70a99893f]
+	chromedriver!(No symbol) [0x7ff70a9e8f10]
+	chromedriver!(No symbol) [0x7ff70a9db06f]
+	chromedriver!(No symbol) [0x7ff70aa0ff6a]
+	chromedriver!(No symbol) [0x7ff70a9da986]
+	chromedriver!(No symbol) [0x7ff70aa34818]
+	chromedriver!(No symbol) [0x7ff70a9d9018]
+	chromedriver!(No symbol) [0x7ff70a9d9f03]
+	chromedriver!GetHandleVerifier [0x7ff70af358f9+329d89]
+	chromedriver!GetHandleVerifier [0x7ff70af2fe46+3242d6]
+	chromedriver!GetHandleVerifier [0x7ff70af530b2+347542]
+	chromedriver!GetHandleVerifier [0x7ff70ac3d3d5+31865]
+	chromedriver!GetHandleVerifier [0x7ff70ac4600c+3a49c]
+	chromedriver!GetHandleVerifier [0x7ff70ac29634+1dac4]
+	chromedriver!GetHandleVerifier [0x7ff70ac297e6+1dc76]
+	chromedriver!GetHandleVerifier [0x7ff70ac0e2f7+2787]
+	KERNEL32!BaseThreadInitThunk [0x7ffa0c907374+14]
+	ntdll!RtlUserThreadStart [0x7ffa0d29cc91+21]
+</status>
 </test>
 <doc>Essa suite testa o acesso ao blog</doc>
-<status status="FAIL" start="2026-04-17T23:28:19.933067" elapsed="10.644712"/>
+<status status="FAIL" start="2026-04-18T02:49:15.411990" elapsed="5.259192"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="1" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">botao_pesquisa</stat>
 </tag>
 <suite>
-<stat name="Teste-Agibank" id="s1" pass="1" fail="1" skip="0">Teste-Agibank</stat>
+<stat name="Teste-Agibank" id="s1" pass="0" fail="1" skip="0">Teste-Agibank</stat>
 </suite>
 </statistics>
 <errors>

@@ -17,10 +17,9 @@ Caso de teste 01 - Acessar a opção de "Pesquisa"
 
 Caso de teste 02 - Pesquisar conteúdo na barra de pesquisa
     [Documentation]  Objetivo deste teste é verificar se a pesquisa está retornando resultado relevantes ao termo.
- #  [Tags]           listar_conteudo
-    Digitar na caixa de pesquisa o "conteudo"
-#   Clicar no botão para pesquisar
-#   verificar se o resultado do conteudo de pesquisa é exibido
+    Digitar na caixa de pesquisa o texto "Consignado"
+    Clicar no botão para pesquisar
+    Verificar se o resultado do conteudo de pesquisa é exibido "Consignado"
     
 
 

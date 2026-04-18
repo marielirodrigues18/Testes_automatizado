@@ -5,7 +5,7 @@ Library    SeleniumLibrary
 *** Variables ***
 ${url}                https://blog.agibank.com.br/
 ${botao_pesquisa}     class=ahfb-svg-iconset.ast-inline-flex.svg-baseline
-${caixa_pesquisa}     class=text
+${caixa_pesquisa}     class=search-field
 
 *** Keywords ***
 
@@ -14,6 +14,7 @@ Abrir o navegador e acessar o blog
    Maximize Browser Window
 
 Fechar o navegador
+   Capture Page Screenshot
    Close Browser
 
 Acessar o blog blog.agibank.com.br
@@ -37,17 +38,20 @@ Verificar se o botao abri a caixa de pesquisa
    Wait Until Element Is Visible  ${caixa_pesquisa}
 
 
-Digitar na caixa de pesquisa o "${conteudo}"
-   Go To    url=${url} 
-   Aguardar elemento com texto    O Agibank
-   Click Element   ${botao_pesquisa} 
-#   Wait Until Element Is Visible  ${caixa_pesquisa}
-#   Input Text    locator=${caixa_pesquisa}    ${conteudo}
-   
+Digitar na caixa de pesquisa o texto "${Consignado}"
+   Go To    url=${url}
+   Clicar no elemento com texto   O Agibank
+   Click Element   ${botao_pesquisa}
+   Wait Until Element Is Visible  locator=${caixa_pesquisa}
+   Input Text  locator=${caixa_pesquisa}    text=${Consignado}
 
 
-#Digitar na caixa de pesquisa o termo "consignado"
-#   Open Browser    browser=chrome
-#   Maximize Browser Window
-#   Input Text    ${caixa_pesquisa}    consignado
+Clicar no botão para pesquisar
+   Click Button   locator=search_submit
+   Sleep  15s
 
+Verificar se o resultado do conteudo de pesquisa é exibido "${Consignado}"
+   Wait Until Element Is Visible  locator=(//span[contains(text(), '${Consignado}')])[2]
+   Sleep  15s
+
+# robot -t "Caso de teste 02 - Pesquisar conteúdo na barra de pesquisa" teste-agibank.robot
