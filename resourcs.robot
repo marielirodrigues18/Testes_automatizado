@@ -48,10 +48,7 @@ Digitar na caixa de pesquisa o texto "${Consignado}"
 
 Clicar no botão para pesquisar
    Click Button   locator=search_submit
-   Sleep  15s
 
 Verificar se o resultado do conteudo de pesquisa é exibido "${Consignado}"
-   Wait Until Element Is Visible  locator=(//span[contains(text(), '${Consignado}')])[2]
-   Sleep  15s
+   Wait Until Page Contains Element  locator=(//span[contains(text(), '${Consignado}')])
 
-# robot -t "Caso de teste 02 - Pesquisar conteúdo na barra de pesquisa" teste-agibank.robot

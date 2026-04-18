@@ -1,9 +1,19 @@
-Protótipo de automação simples
-💻 Tecnologias
-Java
-Github
-IntelliJ IDEA 2026.1
-Resumo caso de teste
-Nesse protótipo está sendo utilizado o blog agibank como modelo de teste. O protótipo deve acessar o blog, realizar uma consulta na lupa 🔎 de pesquisa.
+# Protótipo de automação web com Robot framework
 
-E verificar se a pesquisa está retornando dados conferme foi pesquisado.s
+## 💻 Tecnologias
+- Robot Framework
+- Editor de código - VSCode
+- Liguagem em Python
+- Navegador Chrome versão 147.0.7727.102
+- Bibliotecas SeleniumLybrarie
+
+## Detalhes do projeto 
+Esse projeto é uma automação de teste web com framework Robot.
+Foi utilizado o site "Blog.agibank.com.br" para execução dos testes.
+
+O projeto é composto por 2 casos de teste, aonde:
+
+1 - É realizado a consulta do ícone 🔎 de pesquisa na pagina,
+
+2 - Depois é realizado uma pesquisa no campo de pesquisa, e verificado o resultado da consulta.
+

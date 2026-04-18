@@ -7,7 +7,7 @@ Test Teardown     Fechar o navegador
 
 *** Test Cases ***
 Caso de teste 01 - Acessar a opção de "Pesquisa"
-    [Documentation]  Objetivo deste teste é verificar se a opção de "Pesquisa" no blog da Aigbank está funcionand.
+    [Documentation]  Objetivo deste teste é verificar se a opção de "Pesquisar" no blog da Agibank está funcionando.
     [Tags]           botao_pesquisa
 
     Acessar o blog blog.agibank.com.br
@@ -16,7 +16,7 @@ Caso de teste 01 - Acessar a opção de "Pesquisa"
 
 
 Caso de teste 02 - Pesquisar conteúdo na barra de pesquisa
-    [Documentation]  Objetivo deste teste é verificar se a pesquisa está retornando resultado relevantes ao termo.
+    [Documentation]  Objetivo deste teste é informar um dado e verificar se a pesquisa está retornando resultado relevantes ao conteudo pesquisado.
     Digitar na caixa de pesquisa o texto "Consignado"
     Clicar no botão para pesquisar
     Verificar se o resultado do conteudo de pesquisa é exibido "Consignado"
