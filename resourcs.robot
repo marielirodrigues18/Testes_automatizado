@@ -14,7 +14,6 @@ Abrir o navegador e acessar o blog
    Maximize Browser Window
 
 Fechar o navegador
-   Capture Page Screenshot
    Close Browser
 
 Acessar o blog blog.agibank.com.br
